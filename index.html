@@ -2,80 +2,40 @@
 <html>
     <head>
         <link rel="stylesheet" href="css/styles.css">
+        <script src="js/sqrtFunc.js"></script>
     </head>
     <body>
         <meta charset="utf-8">
-        <title>Resume</title>
+        <title>Calculator</title>
         <div class="card">
-            <img class="card-photo" src="src/BusinessSuit-1.jpg" alt="Profile Photo" height="300" width="400">
-            <h1 class="name">Vitaly Aydov's NC-assignment</h1>
-            
-            <table class="table-cell-center">
-            
-                <tr>
-                    <th>№</th>
-                    <th>Языки Программирования</th>
-                    <th>Практиковал больше года</th>
-                </tr>
-                <tr>
-                    <td>1.</td>
-                    <td>Java</td>
-                    <td><img class="card-checked" src="src/checked.png" alt="checked"></td>
-                </tr>
-                <tr>
-                    <td>2.</td>
-                    <td>C</td>
-                    <td><img class="card-checked" src="src/checked.png" alt="checked"></td>
-                </tr>
-                <tr>
-                    <td>3.</td>
-                    <td>C++</td>
-                    <td><img class="card-checked" src="src/checked.png" alt="checked"></td>
-                </tr>
-                <tr>
-                    <td>4.</td>
-                    <td>Android Java</td>
-                    <td><img class="card-unchecked" src="src/unchecked.png" alt="unchecked"></td>
-                </tr>
-                <tr>
-                    <td>5.</td>
-                    <td>Kotlin</td>
-                    <td><img class="card-unchecked" src="src/unchecked.png" alt="unchecked"></td>
-                </tr>
-                <tr>
-                    <td>6.</td>
-                    <td>JavaScript</td>
-                    <td><img class="card-unchecked" src="src/unchecked.png" alt="unchecked"></td>
-                </tr>
-                <tr>
-                    <td>7.</td>
-                    <td>Matlab</td>
-                    <td><img class="card-unchecked" src="src/unchecked.png" alt="unchecked"></td>
-                </tr>
-                <tr>
-                    <td>8.</td>
-                    <td>R</td>
-                    <td><img class="card-unchecked" src="src/unchecked.png" alt="unchecked"></td>
-                </tr>
-                <tr>
-                    <td>9.</td>
-                    <td>Assembler x8080</td>
-                    <td><img class="card-unchecked" src="src/unchecked.png" alt="unchecked"></td>
-                </tr>
+            <img class="card-photo" src="src/equat.jpg" alt="Profile Photo" height="250" width="400">
+            <p id="buttonsParagraph">
+                <input class="chips" type="text" id="firstCoef" placeholder="Coef A">
+                <input class="chips" type="text" id="secondCoef" placeholder="Coef B">
+                <input class="chips" type="text" id="thirdCoef" placeholder="Coef C">
+                <input class="buttonScaled" type="button" value="Result" id="btnResult" onclick="clickResult()">
+                <input type="button" value="Clear" id="btnClear" onclick="clearFields()">
+            </p>
+            <p class="description" id="statusBar">
+                Waiting for input
+            </p>
+            <table class="table-cell-center" id="tableHistory">
+                <thead>
+                    <tr>
+                        <th>Coef A</th>
+                        <th>Coef B</th>
+                        <th>Coef C</th>
+                        <th>Result</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody">
+                </tbody>
         </table>
-        <p class="description">
-            Student of Higher School of Economics
-            <br>Student of NetCracker Edu Center
-            <br>Github: <a href="github.com/voidmirror">github.com/voidmirror</a>
-        </p>
-        <address class="description">
-            <p>E-mail: vitai2@yandex.ru
-            <br>Tel.: *hiden*
-            <br>Address: Country: Russia, City: *hiden*</p>
-        </address>
+        <br>
+        <pr>
+            <input class="buttonBottom" type="button" value="Clear history" id="btnDeleteRows" onclick="deleteRows()">
+        </pr>
         </div>
-        
-        
         
     </body>
 </html>

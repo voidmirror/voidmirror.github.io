@@ -15,17 +15,18 @@ body {
 }
 
 .card {
-    width: 420px;
+    width: 600px;
     margin: 10px auto;
     background-color: #efefef;
     box-shadow: 0 5px 10px #6f6f6f;
-    border-radius: 
+    border-radius: 10px;
+    text-align: center;
 }
 
 .card-photo {
     display: block;
-    height="300";
-    width="400";
+    /* height="300";
+    width="400"; */
     margin: 0 auto;
     padding: 10px;
 }
@@ -33,11 +34,14 @@ body {
 .table-cell-center {
     align-content: center;
     text-align: center;
-    padding: 10px;
+    margin: 10px;
+    border-collapse: collapse;
+    display: inline-block;
 }
 
 .description {
-    margin-left: 10px;
+    margin: 10px;
+    display: none;
 }
 
 .card-checked {
@@ -48,4 +52,41 @@ body {
 .card-unchecked {
     height: 7px;
     width: 24px;
+}
+
+.chips {
+    width: 40px;
+    margin-left: 5px;
+}
+
+#tableHistory th {
+    border: black;
+    border: 1px solid black;
+    border-bottom: 2px solid black;
+    background: rgb(216, 186, 131);
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#tableHistory td {
+    border: black;
+    border: 1px solid black;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#tableHistory .odd-row {
+    background: rgb(216, 186, 131);
+    border: black;
+    border: 1px solid black;
+}
+
+#tableHistory .even-row {
+    background: aliceblue;
+    border: solid;
+    border: 1px solid black;
+}
+
+#btnDeleteRows {
+    margin-bottom: 10px;
 }
